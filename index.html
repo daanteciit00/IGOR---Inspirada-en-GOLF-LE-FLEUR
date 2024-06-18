@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGOR - Inspirada en GOLF LE FLEUR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<link rel="shortcut icon" href="logo1.ico" type="image/x-icon">
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <label for="menu-toggle" id="menu-button" class="menu-label">MENÚ</label>
+            </div>
+            <div class="nav-center">
+                <a href="#inicio" id="igor-button">
+                    <img src="igor.png" alt="IGOR Logo" class="logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <input type="checkbox" id="menu-toggle">
+    <div id="side-menu">
+        <ul class="menu-options">
+            <li><a href="index1.html">VINILOS</a></li>
+            <li><a href="https://spotify.com" target="_blank">SPOTIFY</a></li>
+        </ul>
+	<ul class="menu-right">
+    	<li><a href="https://instagram.com" target="_blank">instagram</a></li>
+  	<li><a href="https://golflefleur.com/pages/privacy" target="_blank">privacidad</a></li>
+    	<li><a href="https://golflefleur.com/pages/accessibility" target="_blank">accesibilidad</a></li>
+    	<li><a href="https://golflefleur.com/pages/terms" target="_blank">términos</a></li>
+	</ul>	
+       <ul class="menu-bottom">
+            <li>SUSCRÍBETE A NUESTRO BOLETIN</li>
+            <li>TYLER THE CREATOR* © 2024</li>
+            <li>Todos Los Derechos Reservados</li>
+        </ul>
+    </div>
+    <main id="inicio">
+        <div class="image-container">
+            <img src="1.jpg" alt="Imagen 1">
+        </div>
+        <div class="image-container">
+            <img src="2.jpg" alt="Imagen 2">
+        </div>
+        <div class="image-container">
+            <img src="3.jpg" alt="Imagen 3">
+        </div>
+        <div class="image-container" id="image4">
+            <img src="4.jpg" alt="Imagen 4">
+        </div>
+    </main>
+    <div class="fixed-footer">
+        <div class="nav-center">
+            <a href="https://golflefleur.com/" target="_blank"><button class="inspired">Inspirada en <i>GOLF LE FLEUR</i></button></a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('change', function() {
+            var menuButton = document.getElementById('menu-button');
+            if (this.checked) {
+                menuButton.innerText = 'CERRAR';
+            } else {
+                menuButton.innerText = 'MENÚ';
+            }
+        });
+
+        document.getElementById('igor-button').addEventListener('click', function() {
+            document.getElementById('menu-toggle').checked = false;
+            document.getElementById('menu-button').innerText = 'MENÚ';
+        });
+    </script>
+</body>
+</html>
